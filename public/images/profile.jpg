@@ -1,0 +1,6 @@
+<!-- Placeholder image -->
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="800" height="600" fill="#f3f4f6"/>
+<path d="M350 250h100v100h-100z" fill="#9ca3af"/>
+<text x="400" y="320" text-anchor="middle" fill="#6b7280" font-family="Arial" font-size="14">Profile Image</text>
+</svg>

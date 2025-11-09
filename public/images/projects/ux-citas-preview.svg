@@ -1,0 +1,81 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="uxBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff"/>
+      <stop offset="50%" style="stop-color:#f8f9fa"/>
+      <stop offset="100%" style="stop-color:#e9ecef"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#uxBg)"/>
+  
+  <!-- Header section -->
+  <rect width="800" height="60" fill="#0A0E27"/>
+  <text x="400" y="25" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="700" fill="white">UX RESEARCH PROJECT</text>
+  <text x="400" y="45" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#00D9FF">Citas Seguras - Dating App Safety</text>
+  
+  <!-- Problem section -->
+  <rect x="50" y="80" width="320" height="180" rx="8" fill="rgba(139, 0, 0, 0.9)"/>
+  <text x="210" y="110" text-anchor="middle" font-family="sans-serif" font-size="18" font-weight="700" fill="white">Planteamiento</text>
+  <text x="210" y="135" text-anchor="middle" font-family="sans-serif" font-size="18" font-weight="700" fill="white">Problemática</text>
+  
+  <text x="70" y="160" font-family="sans-serif" font-size="9" fill="white">Las personas solteras de entre 28 y 40 años en Buenos Aires</text>
+  <text x="70" y="175" font-family="sans-serif" font-size="9" fill="white">tienen dificultades para concretar relaciones en persona usando</text>
+  <text x="70" y="190" font-family="sans-serif" font-size="9" fill="white">apps de citas. Aunque estas apps permiten el primer contacto,</text>
+  <text x="70" y="205" font-family="sans-serif" font-size="9" fill="white">muchas interacciones quedan solo en el chat, sin avanzar a</text>
+  <text x="70" y="220" font-family="sans-serif" font-size="9" fill="white">encuentros reales. Además, las conversaciones suelen ser</text>
+  <text x="70" y="235" font-family="sans-serif" font-size="9" fill="white">monótonas, compartir datos personales implica riesgos y los</text>
+  <text x="70" y="250" font-family="sans-serif" font-size="9" fill="white">lugares comunes de encuentro no facilitan una experiencia</text>
+  
+  <!-- Solution section -->
+  <rect x="430" y="80" width="320" height="180" rx="8" fill="rgba(139, 0, 0, 0.9)"/>
+  <text x="590" y="110" text-anchor="middle" font-family="sans-serif" font-size="18" font-weight="700" fill="white">Solución</text>
+  
+  <text x="450" y="140" font-family="sans-serif" font-size="9" fill="white">Vamos a diseñar una aplicación que facilite la</text>
+  <text x="450" y="155" font-family="sans-serif" font-size="9" fill="white">transición de las interacciones en línea a encuentros</text>
+  <text x="450" y="170" font-family="sans-serif" font-size="9" fill="white">en persona, incentivando citas seguras y originales</text>
+  <text x="450" y="185" font-family="sans-serif" font-size="9" fill="white">que fomenten una experiencia de conexión auténtica</text>
+  <text x="450" y="200" font-family="sans-serif" font-size="9" fill="white">y significativa.</text>
+  
+  <text x="590" y="230" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="700" fill="white">Objetivos</text>
+  
+  <!-- Objectives bullets -->
+  <circle cx="460" cy="248" r="2" fill="white"/>
+  <text x="470" y="252" font-family="sans-serif" font-size="8" fill="white">Incentivar conversaciones originales y dinámicas.</text>
+  
+  <!-- User section -->
+  <rect x="50" y="280" width="320" height="100" rx="8" fill="rgba(69, 0, 0, 0.9)"/>
+  <text x="210" y="310" text-anchor="middle" font-family="sans-serif" font-size="18" font-weight="700" fill="white">Usuario</text>
+  <text x="70" y="335" font-family="sans-serif" font-size="9" fill="white">Personas solteras de 28 a 40 años en Buenos Aires,</text>
+  <text x="70" y="350" font-family="sans-serif" font-size="9" fill="white">activas socialmente, que buscan una experiencia de</text>
+  <text x="70" y="365" font-family="sans-serif" font-size="9" fill="white">citas más auténtica y segura, y desean pasar del chat</text>
+  
+  <!-- Research methods indicators -->
+  <rect x="450" y="310" width="60" height="30" rx="4" fill="white" stroke="#0A0E27" stroke-width="1"/>
+  <text x="480" y="325" text-anchor="middle" font-family="sans-serif" font-size="7" fill="#0A0E27" font-weight="600">FIGMA</text>
+  <text x="480" y="335" text-anchor="middle" font-family="sans-serif" font-size="7" fill="#0A0E27">Design</text>
+  
+  <rect x="520" y="310" width="80" height="30" rx="4" fill="white" stroke="#0A0E27" stroke-width="1"/>
+  <text x="560" y="325" text-anchor="middle" font-family="sans-serif" font-size="7" fill="#0A0E27" font-weight="600">USER RESEARCH</text>
+  <text x="560" y="335" text-anchor="middle" font-family="sans-serif" font-size="7" fill="#0A0E27">Methods</text>
+  
+  <rect x="610" y="310" width="80" height="30" rx="4" fill="white" stroke="#0A0E27" stroke-width="1"/>
+  <text x="650" y="325" text-anchor="middle" font-family="sans-serif" font-size="7" fill="#0A0E27" font-weight="600">PROTOTYPING</text>
+  <text x="650" y="335" text-anchor="middle" font-family="sans-serif" font-size="7" fill="#0A0E27">Testing</text>
+  
+  <!-- Wireframes mockup -->
+  <rect x="450" y="350" width="300" height="80" fill="white" stroke="#dee2e6" stroke-width="1" rx="4"/>
+  <text x="600" y="370" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#6c757d">WIREFRAMES & PROTOTYPES</text>
+  
+  <!-- Mini wireframe boxes -->
+  <rect x="470" y="380" width="25" height="35" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1"/>
+  <rect x="500" y="380" width="25" height="35" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1"/>
+  <rect x="530" y="380" width="25" height="35" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1"/>
+  <rect x="560" y="380" width="25" height="35" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1"/>
+  
+  <!-- User flow arrows -->
+  <path d="M 495 397 L 500 397" stroke="#00D9FF" stroke-width="1" marker-end="url(#arrowhead)"/>
+  <path d="M 525 397 L 530 397" stroke="#00D9FF" stroke-width="1" marker-end="url(#arrowhead)"/>
+  <path d="M 555 397 L 560 397" stroke="#00D9FF" stroke-width="1" marker-end="url(#arrowhead)"/>
+</svg>
