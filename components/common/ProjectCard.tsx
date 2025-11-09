@@ -25,7 +25,7 @@ export function ProjectCard({ project, className }: ProjectCardProps) {
       transition={{ duration: 0.3, ease: 'easeOut' }}
     >
       {/* Imagen del proyecto */}
-      <div className="relative h-48 overflow-hidden shrink-0">
+      <div className="relative h-48 sm:h-52 overflow-hidden shrink-0">
         <motion.div
           className="relative w-full h-full"
           whileHover={{ scale: 1.05 }}
@@ -36,7 +36,7 @@ export function ProjectCard({ project, className }: ProjectCardProps) {
             alt={project.title}
             fill
             className="object-cover"
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            sizes="(max-width: 640px) 95vw, (max-width: 768px) 85vw, (max-width: 1200px) 50vw, 33vw"
           />
         </motion.div>
         

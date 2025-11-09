@@ -64,7 +64,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
 
         {/* Hero del proyecto */}
         <div className="mb-16">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div>
               <div className="mb-4">
                 <span className="inline-block px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">
@@ -113,7 +113,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
             </div>
             
             {/* Imagen del proyecto */}
-            <div className="relative">
+            <div className="relative max-w-2xl mx-auto lg:max-w-none">
               <div className="aspect-video rounded-xl overflow-hidden shadow-card">
                 <Image
                   src={project.image}
@@ -121,6 +121,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
                   fill
                   className="object-cover"
                   priority
+                  sizes="(max-width: 640px) 90vw, (max-width: 1024px) 80vw, 50vw"
                 />
               </div>
             </div>
@@ -151,7 +152,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
         <div className="border-t border-border pt-12">
           <OtherProjectsHeading />
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 px-4 sm:px-6 md:px-8 lg:px-0 max-w-4xl mx-auto">
             {projects
               .filter(p => p.id !== project.id)
               .slice(0, 2)
@@ -159,7 +160,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
                 <Link
                   key={otherProject.id}
                   href={`/projects/${otherProject.id}`}
-                  className="group bg-white p-6 rounded-xl border border-border hover:shadow-md transition-all"
+                  className="group bg-white p-6 rounded-xl border border-border hover:shadow-md transition-all w-full max-w-sm mx-auto lg:max-w-none"
                 >
                   <div className="flex items-center mb-4">
                     <div className="w-16 h-16 relative rounded-lg overflow-hidden mr-4">

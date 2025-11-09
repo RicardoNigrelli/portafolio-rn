@@ -25,42 +25,43 @@ export function Hero() {
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center max-w-6xl mx-auto">
           {/* Contenido de texto (mobile first) */}
-          <div className="text-center lg:text-left order-2 lg:order-1 space-y-6">
+          <div className="order-2 lg:order-1 space-y-6">
             <FadeInUp delay={0.2}>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-display font-bold text-primary mb-3 leading-tight">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-display font-bold text-primary mb-3 leading-tight text-center lg:text-left">
                 {t('hero.title')}
               </h1>
             </FadeInUp>
 
             <FadeInUp delay={0.4}>
-              <h2 className="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-display font-semibold text-secondary mb-4">
+              <h2 className="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-display font-semibold text-secondary mb-4 text-center lg:text-left">
                 {t('hero.subtitle')}
               </h2>
             </FadeInUp>
 
             <FadeInUp delay={0.6}>
-              <p className="text-base sm:text-lg text-text-secondary mb-6 max-w-lg mx-auto lg:mx-0 leading-relaxed">
+              <p className="text-base sm:text-lg text-text-secondary mb-6 max-w-lg mx-auto lg:mx-0 leading-relaxed text-center lg:text-left">
                 {t('hero.description')}
               </p>
             </FadeInUp>
 
             {/* CTAs */}
             <FadeInUp delay={0.8}>
-              <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start mb-6">
+              <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
                 <Button
                   onClick={handleScrollToProjects}
+                  variant="outline"
                   size="lg"
-                  className="group bg-primary hover:bg-primary/90 text-white px-6 py-3 text-base font-semibold"
+                  className="border-2 border-secondary text-secondary hover:bg-secondary hover:text-primary transition-all duration-300 px-6 py-3 text-base font-medium w-full sm:w-auto"
                 >
                   {t('hero.cta.projects')}
-                  <ArrowDown size={18} className="ml-2 group-hover:animate-bounce" />
+                  <ArrowDown size={18} className="ml-2" />
                 </Button>
                 
                 <Button
                   variant="outline"
                   size="lg"
                   href={`mailto:${contactInfo.email}`}
-                  className="border-2 border-secondary text-secondary hover:bg-secondary hover:text-primary transition-all duration-300 px-6 py-3 text-base font-medium"
+                  className="border-2 border-secondary text-secondary hover:bg-secondary hover:text-primary transition-all duration-300 px-6 py-3 text-base font-medium w-full sm:w-auto"
                 >
                   <Mail size={18} className="mr-2" />
                   {t('hero.cta.contact')}
@@ -70,7 +71,7 @@ export function Hero() {
 
             {/* Links sociales */}
             <FadeInUp delay={1.0}>
-              <div className="flex gap-4 justify-center lg:justify-start">
+              <div className="flex gap-4 justify-center lg:justify-start mt-6">
                 <motion.a
                   href={contactInfo.linkedin}
                   target="_blank"
@@ -116,7 +117,7 @@ export function Hero() {
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: ANIMATION_DURATION.normal }}
               >
-                <div className="w-56 h-56 lg:w-72 lg:h-72 xl:w-80 xl:h-80 rounded-full overflow-hidden border-4 border-secondary/20 shadow-2xl">
+                <div className="w-48 h-48 sm:w-56 sm:h-56 lg:w-72 lg:h-72 xl:w-80 xl:h-80 rounded-full overflow-hidden border-4 border-secondary/20 shadow-2xl">
                   <Image
                     src="/images/profile3.png"
                     alt="Ricardo Nigrelli"

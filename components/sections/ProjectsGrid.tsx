@@ -39,9 +39,9 @@ export function ProjectsGrid() {
         </ScrollReveal>
 
         <ScrollReveal delay={0.2}>
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             <motion.div
-              className="grid grid-cols-1 lg:grid-cols-2 gap-8"
+              className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8 px-4 sm:px-6 md:px-8 lg:px-0"
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
@@ -51,6 +51,7 @@ export function ProjectsGrid() {
               <motion.div
                 key={project.id}
                 variants={itemVariants}
+                className="w-full max-w-sm mx-auto lg:max-w-none lg:mx-0"
               >
                 <ProjectCard project={project} />
               </motion.div>
@@ -61,25 +62,27 @@ export function ProjectsGrid() {
 
         {/* Call to action adicional */}
         <ScrollReveal delay={0.4}>
-          <div className="text-center mt-16">
-            <p className="text-text-secondary mb-6">
-              {t('projects.interested')}
-            </p>
-            <motion.a
-              href="#contact"
-              className="inline-flex items-center text-secondary font-medium hover:underline"
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.2 }}
-              onClick={(e) => {
-                e.preventDefault();
-                const contactSection = document.querySelector('#contact');
-                if (contactSection) {
-                  contactSection.scrollIntoView({ behavior: 'smooth' });
-                }
-              }}
-            >
-              {t('projects.discuss')}
-            </motion.a>
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 lg:px-0 mt-12">
+            <div className="text-left">
+              <p className="text-text-secondary mb-6">
+                {t('projects.interested')}
+              </p>
+              <motion.a
+                href="#contact"
+                className="text-secondary font-medium hover:underline"
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.2 }}
+                onClick={(e) => {
+                  e.preventDefault();
+                  const contactSection = document.querySelector('#contact');
+                  if (contactSection) {
+                    contactSection.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
+              >
+                {t('projects.discuss')}
+              </motion.a>
+            </div>
           </div>
         </ScrollReveal>
       </Container>

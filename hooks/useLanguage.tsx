@@ -115,7 +115,7 @@ const translations = {
     hero: {
       title: 'Ricardo Nigrelli',
       subtitle: 'Full Stack Developer + UX/UI Designer',
-      description: 'At the intersection of psychology and technology, I create digital products for real people.',
+      description: 'At the intersection of psychology and technology, I design digital products for real people.',
       cta: {
         projects: 'View Projects',
         contact: 'Let\'s Talk',
