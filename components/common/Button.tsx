@@ -16,10 +16,10 @@ interface ButtonProps {
 }
 
 const variants = {
-  primary: 'bg-primary text-white hover:bg-primary/90',
-  secondary: 'bg-secondary text-primary hover:bg-secondary/90',
-  outline: 'border-2 border-primary text-primary hover:bg-primary hover:text-white',
-  ghost: 'text-primary hover:bg-primary/10'
+  primary: 'bg-primary text-white hover:bg-black hover:text-white',
+  secondary: 'bg-secondary text-primary hover:bg-black hover:text-white',
+  outline: 'border-2 border-primary text-primary hover:bg-black hover:text-white hover:border-black',
+  ghost: 'text-primary hover:bg-black hover:text-white'
 };
 
 const sizes = {
@@ -39,7 +39,7 @@ export function Button({
   type = 'button'
 }: ButtonProps) {
   const baseClasses = cn(
-    'inline-flex items-center justify-center rounded-lg font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none',
+    'inline-flex items-center justify-center rounded-lg font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none cursor-pointer',
     variants[variant],
     sizes[size],
     className

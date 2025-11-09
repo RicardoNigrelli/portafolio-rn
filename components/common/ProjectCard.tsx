@@ -102,10 +102,10 @@ export function ProjectCard({ project, className }: ProjectCardProps) {
           )}
           {project.presentation && (
             <Button
-              variant="ghost"
+              variant="outline"
               size="sm"
               href={project.presentation}
-              className="text-xs border border-primary"
+              className="text-xs"
             >
               <ExternalLink size={14} className="mr-1" />
               {t('common.presentation')}

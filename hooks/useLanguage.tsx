@@ -54,7 +54,7 @@ const translations = {
       description: 'Herramientas y tecnologías que domino para crear experiencias web completas, desde el diseño hasta el deployment.',
       learning: {
         title: 'En Constante Formación',
-        description: 'Actualmente profundizando en IA/Machine Learning, LLMs, Prompt Engineering, React Server Components y las últimas tendencias en desarrollo y UX.',
+        description: 'Actualmente profundizando en IA/Machine Learning, LLMs, Prompt Engineering y las últimas tendencias en desarrollo y UX.',
       },
     },
     education: {
@@ -72,9 +72,9 @@ const translations = {
       location: 'Ubicación',
       social: 'Sígueme en:',
       prefer: '¿Cómo Prefieres Contactarme?',
-      emailTitle: 'Enviar Email',
+      emailTitle: 'Conversemos',
       emailDescription: 'Para consultas formales, propuestas de trabajo o colaboraciones.',
-      emailCta: 'Escribir Email',
+      emailCta: 'Conversemos',
       finalTitle: '¡Construyamos algo increíble juntos!',
       finalDescription: 'Ya sea un proyecto web, una app móvil, consultoría UX o cualquier idea digital que tengas en mente.',
     },
@@ -90,7 +90,7 @@ const translations = {
       back: 'Volver a proyectos',
       viewSite: 'Ver sitio',
       code: 'Código',
-      sendEmail: 'Enviar Email',
+      sendEmail: 'Conversemos',
       email: 'EMAIL',
       location: 'UBICACIÓN',
       status: {
@@ -144,7 +144,7 @@ const translations = {
       description: 'Tools and technologies I master to create complete web experiences, from design to deployment.',
       learning: {
         title: 'Continuous Learning',
-        description: 'Currently diving deep into AI/Machine Learning, LLMs, Prompt Engineering, React Server Components and the latest trends in development and UX.',
+        description: 'Currently diving deep into AI/Machine Learning, LLMs, Prompt Engineering and the latest trends in development and UX.',
       },
     },
     education: {
@@ -162,7 +162,7 @@ const translations = {
       location: 'Location',
       social: 'Follow me:',
       prefer: 'How Do You Prefer to Contact Me?',
-      emailTitle: 'Send Email',
+      emailTitle: 'Let\'s Talk',
       emailDescription: 'For formal inquiries, work proposals or collaborations.',
       emailCta: 'Write Email',
       finalTitle: 'Let\'s build something amazing together!',
@@ -180,7 +180,7 @@ const translations = {
       back: 'Back to projects',
       viewSite: 'View Site',
       code: 'Code',
-      sendEmail: 'Send Email',
+      sendEmail: 'Let\'s Talk',
       email: 'EMAIL',
       location: 'LOCATION',
       status: {

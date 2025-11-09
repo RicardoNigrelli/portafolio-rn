@@ -51,7 +51,7 @@ export function Hero() {
                   onClick={handleScrollToProjects}
                   variant="outline"
                   size="lg"
-                  className="border-2 border-secondary text-secondary hover:bg-secondary hover:text-primary transition-all duration-300 px-6 py-3 text-base font-medium w-full sm:w-auto"
+                  className="px-6 py-3 text-base font-medium w-full sm:w-auto"
                 >
                   {t('hero.cta.projects')}
                   <ArrowDown size={18} className="ml-2" />
@@ -61,7 +61,7 @@ export function Hero() {
                   variant="outline"
                   size="lg"
                   href={`mailto:${contactInfo.email}`}
-                  className="border-2 border-secondary text-secondary hover:bg-secondary hover:text-primary transition-all duration-300 px-6 py-3 text-base font-medium w-full sm:w-auto"
+                  className="px-6 py-3 text-base font-medium w-full sm:w-auto"
                 >
                   <Mail size={18} className="mr-2" />
                   {t('hero.cta.contact')}
