@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { ExternalLink, Github } from 'lucide-react';
 import { Container } from '@/components/common/Container';
 import { ProjectLinks } from '@/components/project/ProjectLinks';
-import { ProjectTypeBadge } from '@/components/project/ProjectTypeBadge';
+import { ProjectTypeBadge, ProjectTypeBadgeText } from '@/components/project/ProjectTypeBadge';
 import { ProjectDetails } from '@/components/project/ProjectDetails';
 import { TechStackSidebar } from '@/components/project/TechStackSidebar';
 import { ProjectContent } from '@/components/project/ProjectContent';
@@ -153,31 +153,31 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         <div className="border-t border-border pt-12">
           <OtherProjectsHeading />
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 px-4 sm:px-6 md:px-8 lg:px-0 max-w-4xl mx-auto">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-5">
             {projects
               .filter(p => p.id !== project.id)
-              .slice(0, 2)
               .map((otherProject) => (
                 <Link
                   key={otherProject.id}
                   href={`/projects/${otherProject.id}`}
-                  className="group bg-white p-6 rounded-xl border border-border hover:shadow-md transition-all w-full max-w-sm mx-auto lg:max-w-none"
+                  className="group block"
                 >
-                  <div className="flex items-center mb-4">
-                    <div className="w-16 h-16 relative rounded-lg overflow-hidden mr-4">
-                      <Image
-                        src={otherProject.image}
-                        alt={otherProject.title}
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-primary group-hover:text-secondary transition-colors">
-                        {otherProject.title}
-                      </h4>
-                    </div>
+                  {/* La miniatura va en 16:9 como en las tarjetas del home: un
+                      recorte cuadrado de 64px sobre una captura de pantalla
+                      completa no se entendia. */}
+                  <div className="relative aspect-video rounded-lg overflow-hidden border border-border mb-3">
+                    <Image
+                      src={otherProject.image}
+                      alt=""
+                      fill
+                      className="object-cover transition-transform duration-300 group-hover:scale-105"
+                      sizes="(max-width: 640px) 45vw, (max-width: 1024px) 45vw, 22vw"
+                    />
                   </div>
+                  <ProjectTypeBadgeText type={otherProject.type} />
+                  <h4 className="font-semibold text-primary leading-snug group-hover:text-secondary-ink transition-colors">
+                    {otherProject.title}
+                  </h4>
                 </Link>
               ))}
           </div>

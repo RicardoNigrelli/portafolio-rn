@@ -33,8 +33,7 @@ export function ProjectsGrid() {
           <SectionHeading
             title={t('projects.title')}
             description={t('projects.description')}
-            centered
-            className="text-center mb-16 mx-auto"
+            className="mb-16"
           />
         </ScrollReveal>
 
@@ -69,7 +68,7 @@ export function ProjectsGrid() {
               </p>
               <motion.a
                 href="#contact"
-                className="text-secondary font-medium hover:underline"
+                className="text-secondary-ink font-medium hover:underline"
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.2 }}
                 onClick={(e) => {

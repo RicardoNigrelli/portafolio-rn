@@ -22,7 +22,7 @@ export function SectionHeading({
       className
     )}>
       {subtitle && (
-        <p className="text-xs font-bold text-secondary tracking-[0.2em] uppercase mb-3">
+        <p className="text-xs font-bold text-secondary-ink tracking-[0.2em] uppercase mb-3">
           {subtitle}
         </p>
       )}

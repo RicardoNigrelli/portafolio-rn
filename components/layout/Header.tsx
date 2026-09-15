@@ -42,7 +42,7 @@ export function Header() {
           >
             <button
               onClick={() => handleLinkClick('#home')}
-              className="focus:outline-none focus:ring-2 focus:ring-primary/20 rounded-md px-1"
+              className="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/20 rounded-md px-1"
             >
               Ricardo Nigrelli
             </button>
@@ -56,7 +56,7 @@ export function Header() {
                   <motion.button
                     key={item.href}
                     onClick={() => handleLinkClick(item.href)}
-                    className="text-text-primary hover:text-secondary transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-primary/20 rounded-md px-2 py-1"
+                    className="text-text-primary hover:text-secondary-ink transition-colors font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/20 rounded-md px-2 py-1"
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.3, delay: index * 0.1 }}
@@ -70,7 +70,7 @@ export function Header() {
               {/* Language Toggle */}
               <motion.button
                 onClick={toggleLanguage}
-                className="flex items-center space-x-1 px-3 py-1.5 text-sm font-medium text-text-primary hover:text-secondary border border-border hover:border-secondary/30 rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary/20"
+                className="flex items-center space-x-1 px-3 py-1.5 text-sm font-medium text-text-primary hover:text-secondary-ink border border-border hover:border-secondary/30 rounded-lg transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/20"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -86,7 +86,7 @@ export function Header() {
               {/* Mobile Language Toggle */}
               <motion.button
                 onClick={toggleLanguage}
-                className="flex items-center space-x-1 px-2 py-1 text-sm font-medium text-text-primary hover:text-secondary border border-border hover:border-secondary/30 rounded-md transition-all duration-200"
+                className="flex items-center space-x-1 px-2 py-1 text-sm font-medium text-text-primary hover:text-secondary-ink border border-border hover:border-secondary/30 rounded-md transition-all duration-200"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -96,7 +96,7 @@ export function Header() {
               
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="md:hidden p-2 text-primary hover:bg-primary/10 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-primary/20"
+                className="md:hidden p-2 text-primary hover:bg-primary/10 rounded-lg transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/20"
                 aria-label="Toggle menu"
               >
                 {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -122,7 +122,7 @@ export function Header() {
                   <motion.button
                     key={item.href}
                     onClick={() => handleLinkClick(item.href)}
-                    className="block w-full text-left px-4 py-3 text-text-primary hover:bg-primary/10 hover:text-secondary transition-colors rounded-lg font-medium"
+                    className="block w-full text-left px-4 py-3 text-text-primary hover:bg-primary/10 hover:text-secondary-ink transition-colors rounded-lg font-medium"
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.3, delay: index * 0.05 }}

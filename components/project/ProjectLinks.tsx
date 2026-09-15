@@ -22,7 +22,7 @@ export function ProjectLinks({ project }: ProjectLinksProps) {
             href={project.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 text-secondary hover:text-secondary/80 transition-colors"
+            className="flex items-center gap-2 text-secondary-ink hover:text-secondary-ink/80 transition-colors"
           >
             <ExternalLink size={16} />
             {t('common.website')}

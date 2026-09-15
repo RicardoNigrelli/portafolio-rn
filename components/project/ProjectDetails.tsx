@@ -16,7 +16,7 @@ export function ProjectDetails({ project }: ProjectDetailsProps) {
       {/* Timeline */}
       <div className="bg-white p-6 rounded-xl border border-border">
         <div className="flex items-center mb-3">
-          <Calendar className="text-secondary mr-3" size={20} />
+          <Calendar className="text-secondary-ink mr-3" size={20} />
           <h3 className="font-semibold text-primary">{t('common.timeline')}</h3>
         </div>
         <p className="text-text-secondary">{project.details?.timeline}</p>
@@ -25,7 +25,7 @@ export function ProjectDetails({ project }: ProjectDetailsProps) {
       {/* Mi rol */}
       <div className="bg-white p-6 rounded-xl border border-border">
         <div className="flex items-center mb-3">
-          <User className="text-secondary mr-3" size={20} />
+          <User className="text-secondary-ink mr-3" size={20} />
           <h3 className="font-semibold text-primary">{t('common.role')}</h3>
         </div>
         <p className="text-text-secondary">{project.details?.role}</p>
@@ -34,7 +34,7 @@ export function ProjectDetails({ project }: ProjectDetailsProps) {
       {/* Año */}
       <div className="bg-white p-6 rounded-xl border border-border">
         <div className="flex items-center mb-3">
-          <Target className="text-secondary mr-3" size={20} />
+          <Target className="text-secondary-ink mr-3" size={20} />
           <h3 className="font-semibold text-primary">{t('common.year')}</h3>
         </div>
         <p className="text-text-secondary">{project.year}</p>

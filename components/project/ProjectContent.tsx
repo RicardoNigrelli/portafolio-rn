@@ -54,7 +54,7 @@ export function ProjectContent({ project }: ProjectContentProps) {
           <div className="space-y-4">
             {project.details.process.map((step, index) => (
               <div key={index} className="flex items-start">
-                <div className="shrink-0 w-8 h-8 bg-secondary/20 text-secondary rounded-full flex items-center justify-center text-sm font-semibold mr-4 mt-1">
+                <div className="shrink-0 w-8 h-8 bg-secondary/20 text-secondary-ink rounded-full flex items-center justify-center text-sm font-semibold mr-4 mt-1">
                   {index + 1}
                 </div>
                 <p className="text-text-secondary">{step}</p>
@@ -72,7 +72,7 @@ export function ProjectContent({ project }: ProjectContentProps) {
         <div className="space-y-3">
           {project.results.map((result, index) => (
             <div key={index} className="flex items-start">
-              <CheckCircle className="text-secondary shrink-0 mr-3 mt-1" size={20} />
+              <CheckCircle className="text-secondary-ink shrink-0 mr-3 mt-1" size={20} />
               <p className="text-text-secondary">{result}</p>
             </div>
           ))}

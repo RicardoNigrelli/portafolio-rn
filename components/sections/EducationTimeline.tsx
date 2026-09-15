@@ -17,8 +17,7 @@ export function EducationTimeline() {
           <SectionHeading
             title={t('education.title')}
             description={t('education.description')}
-            centered
-            className="text-center mb-16"
+            className="mb-16"
           />
         </ScrollReveal>
 

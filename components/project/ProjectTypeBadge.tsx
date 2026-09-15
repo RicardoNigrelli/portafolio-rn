@@ -11,3 +11,13 @@ export function ProjectTypeBadge({ type }: { type: Project['type'] }) {
     </span>
   );
 }
+
+/** Variante sin pastilla, para la grilla de "Otros proyectos". */
+export function ProjectTypeBadgeText({ type }: { type: Project['type'] }) {
+  const { t } = useLanguage();
+  return (
+    <p className="text-xs font-medium uppercase tracking-wide text-text-secondary mb-1">
+      {t(`common.type.${type}`)}
+    </p>
+  );
+}

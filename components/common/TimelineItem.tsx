@@ -41,21 +41,21 @@ export function TimelineItem({ item, isLast = false, delay = 0 }: TimelineItemPr
               <h3 className="font-display font-bold text-xl lg:text-2xl text-primary mb-2">
                 {typeof item.title === 'string' ? item.title : item.title[language]}
               </h3>
-              <p className="text-secondary font-semibold text-lg">
+              <p className="text-secondary-ink font-semibold text-lg">
                 {item.institution}
               </p>
             </div>
             <span className={cn(
               'px-3 py-1.5 rounded-xl text-xs font-semibold shadow-sm',
               item.status === 'En curso'
-                ? 'bg-secondary/10 text-secondary border border-secondary/20'
+                ? 'bg-secondary/10 text-secondary-ink border border-secondary/20'
                 : 'bg-primary/10 text-primary border border-primary/20'
             )}>
               {item.status === 'En curso' ? t('common.status.inprogress') : t('common.status.completed')}
             </span>
           </div>
           
-          <p className="text-sm text-text-secondary/80 mb-4 font-medium">
+          <p className="text-sm text-text-secondary mb-4 font-medium">
             {item.duration}
           </p>
           

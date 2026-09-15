@@ -30,13 +30,13 @@ export function Hero() {
             </FadeInUp>
 
             <FadeInUp delay={0.1}>
-              <h2 className="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-display font-semibold text-secondary mb-4 text-center lg:text-left">
+              <h2 className="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-display font-semibold text-secondary-ink mb-4 text-center lg:text-left">
                 {t('hero.subtitle')}
               </h2>
             </FadeInUp>
 
             <FadeInUp delay={0.15}>
-              <p className="text-base sm:text-lg text-text-secondary mb-6 max-w-lg mx-auto lg:mx-0 leading-relaxed text-center lg:text-left">
+              <p className="text-base sm:text-lg text-text-secondary mb-6 max-w-lg leading-relaxed">
                 {t('hero.description')}
               </p>
             </FadeInUp>
@@ -146,7 +146,7 @@ export function Hero() {
         <div className="flex justify-center mt-8 lg:mt-12">
           <motion.button
             onClick={handleScrollToProjects}
-            className="text-text-secondary hover:text-primary transition-colors p-3 focus:outline-none focus:ring-2 focus:ring-primary/20 rounded-full hover:bg-primary/5"
+            className="text-text-secondary hover:text-primary transition-colors p-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/20 rounded-full hover:bg-primary/5"
             animate={{ y: [0, 8, 0] }}
             transition={{ 
               duration: 2.5, 

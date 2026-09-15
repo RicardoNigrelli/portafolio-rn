@@ -10,7 +10,7 @@ export function BackToProjects() {
   return (
     <Link 
       href="/#projects" 
-      className="inline-flex items-center text-secondary font-medium hover:text-secondary/80 transition-colors mb-8"
+      className="inline-flex items-center text-secondary-ink font-medium hover:text-secondary-ink/80 transition-colors mb-8"
     >
       <ArrowLeft size={16} className="mr-2" />
       {t('common.back')}

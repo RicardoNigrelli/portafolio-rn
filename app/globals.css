@@ -1,36 +1,70 @@
 @import "tailwindcss";
 
-/* Variables CSS globales */
-:root {
-  --background: #ffffff;
-  --foreground: #1a1a1a;
-  
-  /* Colores del diseño */
-  --primary: #0A0E27;
-  --secondary: #00D9FF;
-  --accent: #FF6B6B;
-  --text-primary: #1A1A1A;
-  --text-secondary: #666666;
-  --text-light: #999999;
-  --border: #E5E5E5;
-  --shadow: rgba(0, 0, 0, 0.1);
-  
-  /* Fuentes */
-  --font-sans: var(--font-inter);
-  --font-display: var(--font-poppins);
-}
+/* ---------------------------------------------------------------------------
+   Sistema de diseño.
 
-/* Base styles */
-html {
-  scroll-behavior: smooth;
+   OJO: esto vive aca y no en tailwind.config.ts a proposito. Con Tailwind v4 e
+   `@import "tailwindcss"`, el archivo tailwind.config.ts se ignora salvo que se
+   lo declare con `@config`. Estuvo ignorado y el sitio corrio sin paleta, sin
+   sombras y sin escala tipografica: bg-primary daba transparente, shadow-card
+   daba none y text-h1-desktop daba 16px, todo sin un solo error de build.
+
+   Los tokens de `@theme` generan las utilidades (bg-primary, text-text-secondary,
+   shadow-card, ...) y ademas quedan como custom properties para usar en CSS.
+--------------------------------------------------------------------------- */
+@theme {
+  /* Color */
+  --color-primary: #0A0E27;         /* Azul oscuro - headings, botones primarios */
+  --color-secondary: #00D9FF;       /* Cian de marca - SOLO sobre oscuro (11.19:1 sobre primary) */
+  --color-secondary-ink: #007A8F;   /* Mismo hue, legible sobre claro (5.02:1) */
+  --color-accent: #FF6B6B;          /* Rojo suave - highlights puntuales */
+  --color-background: #FFFFFF;
+  --color-text-primary: #1A1A1A;    /* Casi negro - body text */
+  --color-text-secondary: #666666;  /* Gris - descriptivos (5.74:1 sobre blanco) */
+  --color-text-light: #999999;      /* Gris claro - NO usar como texto: 2.85:1 */
+  --color-border: #E5E5E5;
+
+  /* Tipografia */
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --font-display: var(--font-poppins), system-ui, sans-serif;
+  --font-mono: "Fira Code", "IBM Plex Mono", monospace;
+
+  /* Escala tipografica */
+  --text-h1-mobile: 40px;
+  --text-h1-mobile--line-height: 1.2;
+  --text-h1-desktop: 56px;
+  --text-h1-desktop--line-height: 1.2;
+  --text-h2-mobile: 32px;
+  --text-h2-mobile--line-height: 1.2;
+  --text-h2-desktop: 44px;
+  --text-h2-desktop--line-height: 1.2;
+  --text-h3-mobile: 24px;
+  --text-h3-mobile--line-height: 1.2;
+  --text-h3-desktop: 32px;
+  --text-h3-desktop--line-height: 1.2;
+  --text-body-mobile: 16px;
+  --text-body-mobile--line-height: 1.6;
+  --text-body-desktop: 18px;
+  --text-body-desktop--line-height: 1.6;
+
+  /* Espaciado extra */
+  --spacing-18: 4.5rem;
+  --spacing-22: 5.5rem;
+  --spacing-26: 6.5rem;
+  --spacing-30: 7.5rem;
+
+  /* Elevacion */
+  --shadow-card: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -1px rgb(0 0 0 / 0.06);
+  --shadow-card-hover: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 10px 10px -5px rgb(0 0 0 / 0.04);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--color-background);
+  color: var(--color-text-primary);
 }
 
-/* Smooth scrolling para navegación */
+/* El scroll suave se declara SOLO aca dentro: fuera de la media query pisaba
+   la preferencia del sistema. */
 @media (prefers-reduced-motion: no-preference) {
   html {
     scroll-behavior: smooth;
@@ -43,18 +77,23 @@ section[id] {
   scroll-margin-top: 5rem;
 }
 
-/* Focus styles para accesibilidad */
+/* Foco visible por teclado (WCAG 2.4.7) */
 :focus-visible {
-  outline: 2px solid var(--primary);
+  outline: 2px solid var(--color-primary);
   outline-offset: 2px;
 }
 
-/* Gradients personalizados */
-.bg-linear-to-r {
-  background-image: linear-gradient(to right, var(--tw-gradient-stops));
-}
+/* Framer Motion escribe el estado inicial de la animacion como estilo inline
+   durante el render del servidor: 63 elementos salen con `opacity:0`. Si el
+   JavaScript no corre, nadie los anima y la pagina queda visualmente en blanco
+   por debajo del hero, aunque el texto este en el HTML.
 
-/* Tipografía personalizada */
-.font-display {
-  font-family: var(--font-poppins), system-ui, sans-serif;
+   `scripting: none` aplica exactamente en ese caso y en ningun otro: no afecta
+   al usuario con JS habilitado. */
+@media (scripting: none) {
+  [style*="opacity:0"],
+  [style*="opacity: 0"] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
 }

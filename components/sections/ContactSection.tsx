@@ -22,12 +22,11 @@ export function ContactSection() {
           <SectionHeading
             title={t('contact.title')}
             description={t('contact.description')}
-            centered
-            className="text-center mb-12"
+            className="mb-12"
           />
         </ScrollReveal>
 
-        <div className="max-w-2xl mx-auto text-center">
+        <div className="max-w-2xl">
           {/* CTA principal */}
           <ScrollReveal delay={0.2}>
             <div className="mb-8">
@@ -47,7 +46,7 @@ export function ContactSection() {
           <ScrollReveal delay={0.4}>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-lg mx-auto">
               <div className="flex items-center justify-center p-4">
-                <Mail className="text-secondary mr-3" size={20} />
+                <Mail className="text-secondary-ink mr-3" size={20} />
                 <div>
                   <p className="font-semibold text-primary text-sm mb-1">{t('common.email').toUpperCase()}</p>
                   <p className="text-text-secondary text-sm">{contactInfo.email}</p>
@@ -55,7 +54,7 @@ export function ContactSection() {
               </div>
 
               <div className="flex items-center justify-center p-4">
-                <MapPin className="text-secondary mr-3" size={20} />
+                <MapPin className="text-secondary-ink mr-3" size={20} />
                 <div>
                   <p className="font-semibold text-primary text-sm mb-1">{t('common.location').toUpperCase()}</p>
                   <p className="text-text-secondary text-sm">{contactInfo.location}</p>
