@@ -5,6 +5,8 @@ export interface Project {
   description: string;
   image: string;
   url?: string;
+  /** Etiqueta del enlace cuando no es un sitio web (p. ej. un archivo de Figma). */
+  urlLabel?: string;
   github?: string;
   presentation?: string;
   type: 'producto' | 'backend' | 'landing' | 'ux' | 'ui';
@@ -151,32 +153,34 @@ export const projects: Project[] = [
   },
   {
     id: 'ui-design-project',
-    title: 'UI Design Portfolio',
+    title: 'TribuXmusic',
     description: 'Diseño de TribuXmusic, una app para descubrir recitales y reservar: del reporte UX y los wireframes a mano alzada a las pantallas finales, con pruebas de usabilidad.',
     image: '/images/projects/ui-design-portfolio.png',
     url: 'https://www.figma.com/design/wdTj3Sr9jJchEHiP1HwW69/Proyecto-UI---Ricardo-Nigrelli?node-id=0-1&t=bmpK6egcdPWVxEO6-1',
+    urlLabel: 'Ver en Figma',
     type: 'ui',
     year: 2025,
-    stack: ['Figma', 'Design Systems', 'Component Libraries', 'Prototyping'],
-    problem: 'Crear interfaces consistentes y escalables que mejoren la experiencia de usuario y faciliten el desarrollo.',
-    solution: 'Desarrollé un sistema de diseño completo con componentes reutilizables, guías de estilo y patrones de interacción.',
+    stack: ['Figma', 'Wireframing', 'Prototyping', 'Usability Testing'],
+    problem: 'Que los jóvenes pierdan recitales por desinformación: la agenda de bandas y solistas emergentes está dispersa entre páginas oficiales, redes sociales y medios sueltos.',
+    solution: 'Una app que reúne y recomienda esa agenda en un solo lugar, y que además conecta entre sí a quienes van al mismo evento. El MVP quedó en cinco funciones: registro, búsqueda con filtros, detalle completo del evento, contacto entre asistentes y guardado de favoritos.',
     results: [
-      'Sistema de diseño escalable y consistente',
-      'Biblioteca de componentes reutilizables',
-      'Mejoras significativas en usabilidad',
-      'Proceso de design optimizado para desarrollo'
+      'Pantallas de registro, búsqueda con filtros, detalle del evento, conversación entre asistentes y confirmación de reserva',
+      'Wireframes a mano alzada llevados a digital y ajustados sobre una grilla de columnas',
+      'Prueba de usabilidad con 5 participantes de 22 a 35 años sobre tres tareas: buscar un evento, ver su detalle y reservar hasta el pago',
+      'La prueba midió eficacia, eficiencia y satisfacción, y detectó que la confirmación de reserva no se entendía y que faltaba información en el detalle'
     ],
     featured: true,
     details: {
-      context: 'Especialización en UI Avanzado en Talento Tech para dominar interfaces modernas.',
-      role: 'UI Designer',
+      context: 'Trabajo final de UI Avanzado en Talento Tech.',
+      role: 'UX/UI Designer',
       timeline: '4 meses',
       process: [
-        'Research de tendencias y mejores prácticas',
-        'Creación de design system base',
-        'Diseño de componentes avanzados',
-        'Testing de usabilidad',
-        'Documentación y handoff'
+        'Reporte UX: problema, persona y definición del MVP',
+        'Happy path del recorrido principal',
+        'Wireframes a mano alzada y su pasaje a digital',
+        'Evolución de los wireframes sobre grilla de columnas',
+        'Pantallas finales, incluidos los estados de éxito y de error',
+        'Pruebas de usabilidad y registro de hallazgos'
       ]
     }
   }

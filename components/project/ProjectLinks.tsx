@@ -25,7 +25,7 @@ export function ProjectLinks({ project }: ProjectLinksProps) {
             className="flex items-center gap-2 text-secondary-ink hover:text-secondary-ink/80 transition-colors"
           >
             <ExternalLink size={16} />
-            {t('common.website')}
+            {project.urlLabel ?? t('common.website')}
           </a>
         )}
         {project.github && (

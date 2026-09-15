@@ -84,7 +84,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               {/* CTAs */}
               <div className="flex flex-wrap gap-4">
                 {project.url && (
-                  <ViewWebsiteButton url={project.url} />
+                  <ViewWebsiteButton url={project.url} label={project.urlLabel} />
                 )}
                 
                 {project.github && (

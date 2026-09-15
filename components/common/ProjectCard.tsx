@@ -102,7 +102,7 @@ export function ProjectCard({ project, className }: ProjectCardProps) {
               className="text-xs"
             >
               <ExternalLink size={14} className="mr-1" />
-              {t('common.viewSite')}
+              {project.urlLabel ?? t('common.viewSite')}
             </Button>
           )}
           {project.github && (
