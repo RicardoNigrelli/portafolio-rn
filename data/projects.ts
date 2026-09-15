@@ -152,7 +152,7 @@ export const projects: Project[] = [
   {
     id: 'ui-design-project',
     title: 'UI Design Portfolio',
-    description: 'Creación de sistemas de diseño escalables: componentes, patrones y metodologías para interfaces modernas.',
+    description: 'Diseño de TribuXmusic, una app para descubrir recitales y reservar: del reporte UX y los wireframes a mano alzada a las pantallas finales, con pruebas de usabilidad.',
     image: '/images/projects/ui-design-portfolio.png',
     url: 'https://www.figma.com/design/wdTj3Sr9jJchEHiP1HwW69/Proyecto-UI---Ricardo-Nigrelli?node-id=0-1&t=bmpK6egcdPWVxEO6-1',
     type: 'ui',
