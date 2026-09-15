@@ -54,8 +54,8 @@ const translations = {
       title: 'Skills & Tecnologías',
       description: 'Herramientas y tecnologías que domino para crear experiencias web completas, desde el diseño hasta el deployment.',
       learning: {
-        title: 'En Constante Formación',
-        description: 'Actualmente profundizando en IA/Machine Learning, LLMs, Prompt Engineering y las últimas tendencias en desarrollo y UX.',
+        title: 'Formación en curso',
+        description: 'Curso Google Cloud Computing Foundations (Google Skills / Talento Tech) con la certificación Associate Cloud Engineer como objetivo. Completé Fundamentos de IA en IBM SkillsBuild en diciembre de 2025.',
       },
     },
     education: {
@@ -153,8 +153,8 @@ const translations = {
       title: 'Skills & Technologies',
       description: 'Tools and technologies I master to create complete web experiences, from design to deployment.',
       learning: {
-        title: 'Continuous Learning',
-        description: 'Currently diving deep into AI/Machine Learning, LLMs, Prompt Engineering and the latest trends in development and UX.',
+        title: 'Currently studying',
+        description: 'Google Cloud Computing Foundations (Google Skills / Talento Tech), working towards the Associate Cloud Engineer certification. Completed IBM SkillsBuild AI Fundamentals in December 2025.',
       },
     },
     education: {
