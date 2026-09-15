@@ -26,7 +26,9 @@ export function ProjectCard({ project, className }: ProjectCardProps) {
       transition={{ duration: 0.3, ease: 'easeOut' }}
     >
       {/* Imagen del proyecto */}
-      <div className="relative h-48 sm:h-52 overflow-hidden shrink-0">
+      {/* 16:9, no alto fijo: con h-48 el contenedor quedaba en 2.67:1 y recortaba
+          un tercio de la miniatura, comiendose titulos y cabeceras. */}
+      <div className="relative aspect-video overflow-hidden shrink-0">
         <motion.div
           className="relative w-full h-full"
           whileHover={{ scale: 1.05 }}

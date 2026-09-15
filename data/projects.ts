@@ -122,7 +122,7 @@ export const projects: Project[] = [
     id: 'ux-citas-seguras',
     title: 'UX Citas Seguras',
     description: 'Analicé el comportamiento de usuarios y transformé esa información en soluciones digitales para mejorar la seguridad.',
-    image: '/images/proyecto-ux.png',
+    image: '/images/projects/ux-citas-seguras.jpg',
     presentation: 'https://docs.google.com/presentation/d/1por20vgzmDIxu-0HylNDiSlD3v0UgIRO/edit',
     type: 'ux',
     year: 2024,
