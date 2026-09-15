@@ -153,7 +153,7 @@ export const projects: Project[] = [
     id: 'ui-design-project',
     title: 'UI Design Portfolio',
     description: 'Creación de sistemas de diseño escalables: componentes, patrones y metodologías para interfaces modernas.',
-    image: '/images/proyecto-ui.png',
+    image: '/images/projects/ui-design-portfolio.png',
     url: 'https://www.figma.com/design/wdTj3Sr9jJchEHiP1HwW69/Proyecto-UI---Ricardo-Nigrelli?node-id=0-1&t=bmpK6egcdPWVxEO6-1',
     type: 'ui',
     year: 2025,
