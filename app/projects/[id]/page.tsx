@@ -150,7 +150,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         </div>
         
         {/* Navegación a otros proyectos */}
-        <div className="border-t border-border pt-12">
+        <div className="border-t border-border pt-12 pb-20">
           <OtherProjectsHeading />
           
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-5">
