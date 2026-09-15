@@ -1,8 +1,9 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { ExternalLink, Github } from 'lucide-react';
+import { ArrowRight, ExternalLink, Github } from 'lucide-react';
 import { Project } from '@/data/projects';
 import { Button } from './Button';
 import { cn } from '@/lib/utils';
@@ -31,6 +32,7 @@ export function ProjectCard({ project, className }: ProjectCardProps) {
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.3 }}
         >
+          <Link href={`/projects/${project.id}`} aria-label={project.title} className="absolute inset-0 block">
           <Image
             src={project.image}
             alt={project.title}
@@ -38,21 +40,24 @@ export function ProjectCard({ project, className }: ProjectCardProps) {
             className="object-cover"
             sizes="(max-width: 640px) 95vw, (max-width: 768px) 85vw, (max-width: 1200px) 50vw, 33vw"
           />
+          </Link>
         </motion.div>
         
         {/* Badge del tipo de proyecto */}
         <div className="absolute top-4 left-4">
           <span className="px-3 py-1.5 bg-primary/90 text-white text-xs font-semibold rounded-full">
-            {project.type}
+            {t(`common.type.${project.type}`)}
           </span>
         </div>
       </div>
 
       {/* Contenido */}
-      <div className="p-5 space-y-3 flex-1 flex flex-col text-center">
+      <div className="p-5 space-y-3 flex-1 flex flex-col">
         <div className="space-y-2 flex-1">
           <h3 className="text-xl lg:text-2xl font-display font-bold text-primary mb-3 leading-tight">
-            {project.title}
+            <Link href={`/projects/${project.id}`} className="hover:underline underline-offset-4">
+              {project.title}
+            </Link>
           </h3>
           <p className="text-text-secondary leading-relaxed text-sm line-clamp-3">
             {project.description}
@@ -60,7 +65,7 @@ export function ProjectCard({ project, className }: ProjectCardProps) {
         </div>
 
         {/* Stack de tecnologías */}
-        <div className="flex flex-wrap gap-1.5 pt-1 justify-center">
+        <div className="flex flex-wrap gap-1.5 pt-1">
           {project.stack.slice(0, 3).map((tech) => (
             <span
               key={tech}
@@ -77,7 +82,16 @@ export function ProjectCard({ project, className }: ProjectCardProps) {
         </div>
 
         {/* Links */}
-        <div className="flex gap-2 pt-2 mt-auto justify-center">
+        <div className="flex flex-wrap gap-2 pt-2 mt-auto items-center">
+          <Button
+            variant="primary"
+            size="sm"
+            href={`/projects/${project.id}`}
+            className="text-xs"
+          >
+            {t('common.viewCase')}
+            <ArrowRight size={14} className="ml-1" />
+          </Button>
           {project.url && (
             <Button
               variant="outline"

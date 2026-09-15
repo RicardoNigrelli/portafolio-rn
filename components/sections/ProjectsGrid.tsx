@@ -74,10 +74,7 @@ export function ProjectsGrid() {
                 transition={{ duration: 0.2 }}
                 onClick={(e) => {
                   e.preventDefault();
-                  const contactSection = document.querySelector('#contact');
-                  if (contactSection) {
-                    contactSection.scrollIntoView({ behavior: 'smooth' });
-                  }
+                  document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' });
                 }}
               >
                 {t('projects.discuss')}

@@ -1,6 +1,5 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import { Container } from '@/components/common/Container';
 import { SectionHeading } from '@/components/common/SectionHeading';
 import { SkillBadge } from '@/components/common/SkillBadge';
@@ -10,7 +9,7 @@ import { skillCategories } from '@/data/skills';
 
 export function SkillsSection() {
   const { t } = useLanguage();
-  
+
   return (
     <section id="skills" className="py-16">
       <Container>
@@ -18,72 +17,35 @@ export function SkillsSection() {
           <SectionHeading
             title={t('skills.title')}
             description={t('skills.description')}
-            centered
-            className="text-center mb-16"
+            className="mb-10"
           />
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-          {skillCategories.map((category, categoryIndex) => (
-            <ScrollReveal key={category.label} delay={categoryIndex * 0.1}>
-              <motion.div
-                className="bg-white p-6 lg:p-8 rounded-2xl border border-border shadow-sm hover:shadow-lg hover:border-secondary/20 transition-all duration-300"
-                whileHover={{ y: -6, scale: 1.02 }}
-                transition={{ duration: 0.3 }}
+        <ScrollReveal delay={0.05}>
+          <dl className="divide-y divide-border border-y border-border">
+            {skillCategories.map((category) => (
+              <div
+                key={category.label}
+                className="grid grid-cols-1 sm:grid-cols-[10rem_1fr] gap-2 sm:gap-6 py-5"
               >
-                {/* Encabezado de categoría */}
-                <div className="flex items-center mb-5">
-                  <span className="text-3xl mr-4">{category.icon}</span>
-                  <h3 className="font-display font-bold text-xl lg:text-2xl text-primary">
-                    {category.label}
-                  </h3>
-                </div>
-
-                {/* Skills badges */}
-                <motion.div
-                  className="flex flex-wrap gap-2"
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true }}
-                  variants={{
-                    hidden: { opacity: 0 },
-                    visible: {
-                      opacity: 1,
-                      transition: {
-                        staggerChildren: 0.1
-                      }
-                    }
-                  }}
-                >
+                <dt className="font-display font-semibold text-primary text-sm uppercase tracking-wide pt-1">
+                  {category.label}
+                </dt>
+                <dd className="flex flex-wrap gap-2">
                   {category.items.map((skill) => (
-                    <motion.div
-                      key={skill}
-                      variants={{
-                        hidden: { opacity: 0, scale: 0.8 },
-                        visible: { opacity: 1, scale: 1 }
-                      }}
-                    >
-                      <SkillBadge skill={skill} />
-                    </motion.div>
+                    <SkillBadge key={skill} skill={skill} />
                   ))}
-                </motion.div>
-              </motion.div>
-            </ScrollReveal>
-          ))}
-        </div>
+                </dd>
+              </div>
+            ))}
+          </dl>
+        </ScrollReveal>
 
-        {/* Información adicional */}
-        <ScrollReveal delay={0.6}>
-          <div className="mt-12 lg:mt-16">
-            <div className="bg-linear-to-br from-secondary/10 via-primary/5 to-secondary/10 p-8 lg:p-12 rounded-3xl border border-secondary/20 shadow-lg text-center">
-              <h3 className="font-display font-bold text-2xl lg:text-3xl text-primary mb-6">
-                {t('skills.learning.title')}
-              </h3>
-              <p className="text-text-secondary max-w-3xl mx-auto text-lg leading-relaxed font-medium">
-                {t('skills.learning.description')}
-              </p>
-            </div>
-          </div>
+        <ScrollReveal delay={0.1}>
+          <p className="mt-8 text-text-secondary max-w-2xl leading-relaxed">
+            <span className="font-semibold text-primary">{t('skills.learning.title')}: </span>
+            {t('skills.learning.description')}
+          </p>
         </ScrollReveal>
       </Container>
     </section>

@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react';
+import { ArrowDown, Download, Github, Linkedin, Mail } from 'lucide-react';
 import { Container } from '@/components/common/Container';
 import { Button } from '@/components/common/Button';
 import { FadeInUp } from '@/components/effects/FadeInUp';
@@ -11,13 +11,10 @@ import { useLanguage } from '@/hooks/useLanguage';
 import { ANIMATION_DURATION } from '@/lib/constants';
 
 export function Hero() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   
   const handleScrollToProjects = () => {
-    const projectsSection = document.querySelector('#projects');
-    if (projectsSection) {
-      projectsSection.scrollIntoView({ behavior: 'smooth' });
-    }
+    document.querySelector('#projects')?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
@@ -26,26 +23,26 @@ export function Hero() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center max-w-6xl mx-auto">
           {/* Contenido de texto (mobile first) */}
           <div className="order-2 lg:order-1 space-y-6">
-            <FadeInUp delay={0.2}>
+            <FadeInUp delay={0.05}>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-display font-bold text-primary mb-3 leading-tight text-center lg:text-left">
                 {t('hero.title')}
               </h1>
             </FadeInUp>
 
-            <FadeInUp delay={0.4}>
+            <FadeInUp delay={0.1}>
               <h2 className="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-display font-semibold text-secondary mb-4 text-center lg:text-left">
                 {t('hero.subtitle')}
               </h2>
             </FadeInUp>
 
-            <FadeInUp delay={0.6}>
+            <FadeInUp delay={0.15}>
               <p className="text-base sm:text-lg text-text-secondary mb-6 max-w-lg mx-auto lg:mx-0 leading-relaxed text-center lg:text-left">
                 {t('hero.description')}
               </p>
             </FadeInUp>
 
             {/* CTAs */}
-            <FadeInUp delay={0.8}>
+            <FadeInUp delay={0.2}>
               <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
                 <Button
                   onClick={handleScrollToProjects}
@@ -66,11 +63,21 @@ export function Hero() {
                   <Mail size={18} className="mr-2" />
                   {t('hero.cta.contact')}
                 </Button>
+
+                <Button
+                  variant="outline"
+                  size="lg"
+                  href={language === 'en' ? '/cv/CV-Ricardo-Nigrelli-EN.pdf' : '/cv/CV-Ricardo-Nigrelli-ES.pdf'}
+                  className="px-6 py-3 text-base font-medium w-full sm:w-auto"
+                >
+                  <Download size={18} className="mr-2" />
+                  {t('hero.cta.cv')}
+                </Button>
               </div>
             </FadeInUp>
 
             {/* Links sociales */}
-            <FadeInUp delay={1.0}>
+            <FadeInUp delay={0.25}>
               <div className="flex gap-4 justify-center lg:justify-start mt-6">
                 <motion.a
                   href={contactInfo.linkedin}

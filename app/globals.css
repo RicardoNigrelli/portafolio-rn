@@ -37,6 +37,12 @@ body {
   }
 }
 
+/* Las secciones son destino de anclas: dejamos aire para el header fijo (h-16)
+   para que el titulo no quede tapado al saltar. */
+section[id] {
+  scroll-margin-top: 5rem;
+}
+
 /* Focus styles para accesibilidad */
 :focus-visible {
   outline: 2px solid var(--primary);

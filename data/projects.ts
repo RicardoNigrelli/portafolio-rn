@@ -7,7 +7,7 @@ export interface Project {
   url?: string;
   github?: string;
   presentation?: string;
-  type: 'Event Landing' | 'UX Research' | 'Ecommerce' | 'UI Design';
+  type: 'producto' | 'backend' | 'landing' | 'ux' | 'ui';
   year: number;
   stack: string[];
   problem: string;
@@ -24,12 +24,76 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: 'urban-proyecta',
+    title: 'Urban Proyecta',
+    description: 'Sistema de proyección en vivo: un panel de operador controla la pantalla y todo se sincroniza en tiempo real. En uso desde mayo de 2026.',
+    image: '/images/projects/urban-proyecta.png',
+    url: 'https://urban-proyecta-frontend.vercel.app/dashboard',
+    github: 'https://github.com/RicardoNigrelli/live-worship-projection',
+    type: 'producto',
+    year: 2026,
+    stack: ['Next.js 14', 'TypeScript', 'Socket.IO', 'Express', 'Prisma', 'PostgreSQL'],
+    problem: 'Proyectar en un servicio en vivo obliga a que quien opera esté sentado en la máquina del proyector, haciendo clic en las diapositivas una por una. Es frágil: una sola máquina, un solo operador, sin control remoto.',
+    solution: 'Separé el operador de la pantalla. Un panel controla letras, placas y multimedia desde cualquier dispositivo, y las pantallas conectadas se sincronizan por WebSockets con aislamiento por sala, de modo que dos servicios simultáneos no se pisan.',
+    results: [
+      'En producción desde mayo de 2026',
+      'Lo operan tres personas además de mí',
+      'Sincronización en tiempo real entre panel y pantallas',
+      'Aislamiento por sala para servicios simultáneos'
+    ],
+    featured: true,
+    details: {
+      context: 'Desarrollado por iniciativa propia para la comunidad en la que participo como voluntario.',
+      role: 'Full Stack Developer & Arquitectura',
+      timeline: 'Desde mayo 2026, en evolución',
+      process: [
+        'Relevamiento del flujo real de un servicio en vivo',
+        'Decisión de arquitectura: separar operador de pantalla',
+        'Capa de tiempo real con Socket.IO y salas aisladas',
+        'Panel de operador y vistas de proyección',
+        'Copia sanitizada con datos sintéticos para portafolio'
+      ]
+    }
+  },
+  {
+    id: 'facturacion-arca',
+    title: 'Facturación electrónica ARCA/AFIP',
+    description: 'Backend que emite comprobantes fiscales contra ARCA/AFIP, con colas, idempotencia estricta y trazabilidad hasta el CAE.',
+    image: '/images/projects/facturacion-arca.png',
+    url: 'https://nestjs-facturacion-electronica-demo.vercel.app/api/docs',
+    github: 'https://github.com/RicardoNigrelli/nestjs-facturacion-electronica-demo',
+    type: 'backend',
+    year: 2026,
+    stack: ['NestJS', 'TypeScript', 'BullMQ', 'Redis', 'PostgreSQL', 'Swagger'],
+    problem: 'Facturar contra AFIP no es trivial: cada comprobante necesita un CAE que solo emite el organismo, la numeración es secuencial por punto de venta y no admite duplicados ni huecos, el token de autenticación vence cada 12 horas, y si el proceso se cae a mitad de un lote reintentar no puede duplicar facturas.',
+    solution: 'Emisión asincrónica con colas y reintentos, idempotencia en dos niveles —constraint único en base de datos más verificación previa contra AFIP— y persistencia de cada request y response para auditoría y reconciliación.',
+    results: [
+      'Idempotencia estricta: un mismo pedido nunca genera dos comprobantes',
+      'Trazabilidad completa de cada operación hasta su CAE',
+      'Colas con reintentos y backoff ante fallos del organismo',
+      'Demo pública explorable desde Swagger'
+    ],
+    featured: true,
+    details: {
+      context: 'Copia de portafolio sanitizada. La demo corre siempre contra un AFIP simulado, forzado por código: nunca se conecta al organismo real.',
+      role: 'Backend Developer',
+      timeline: 'Junio a agosto 2026',
+      process: [
+        'Estudio de los servicios WSAA y WSFEv1 de AFIP',
+        'Diseño del flujo operación → comprobante → CAE',
+        'Idempotencia y manejo de reintentos',
+        'Auditoría y reconciliación de cada llamada',
+        'Sanitización y publicación con AFIP en modo simulado'
+      ]
+    }
+  },
+  {
     id: 'falsa-boda',
     title: 'Falsa Boda',
     description: 'Desarrollé la web de un evento exclusivo, priorizando la experiencia visual y la facilidad de uso para invitados.',
     image: '/images/falsaboda.png',
     url: 'https://falsaboda.urbanbuenosaires.org/',
-    type: 'Event Landing',
+    type: 'landing',
     year: 2024,
     stack: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion'],
     problem: 'Crear una experiencia web elegante para un evento exclusivo que capture la esencia del evento y facilite la gestión de invitaciones.',
@@ -59,8 +123,8 @@ export const projects: Project[] = [
     title: 'UX Citas Seguras',
     description: 'Analicé el comportamiento de usuarios y transformé esa información en soluciones digitales para mejorar la seguridad.',
     image: '/images/proyecto-ux.png',
-    presentation: 'https://docs.google.com/presentation/d/1por20vgzmDIxu-0HylNDiSlD3v0UgIRO/edit?usp=sharing&ouid=105695743952816245272&rtpof=true&sd=true',
-    type: 'UX Research',
+    presentation: 'https://docs.google.com/presentation/d/1por20vgzmDIxu-0HylNDiSlD3v0UgIRO/edit',
+    type: 'ux',
     year: 2024,
     stack: ['Figma', 'User Research', 'Prototyping', 'Design Thinking'],
     problem: 'Las aplicaciones de citas actuales no priorizan la seguridad de los usuarios, especialmente de mujeres y grupos vulnerables.',
@@ -86,43 +150,12 @@ export const projects: Project[] = [
     }
   },
   {
-    id: 'refriviedma',
-    title: 'RefriViedma',
-    description: 'Sistema completo de catálogo: desde arquitectura de información hasta implementación responsive.',
-    image: '/images/refriviedma.png',
-    url: 'https://refriviedma.com.ar/',
-    type: 'Ecommerce',
-    year: 2024,
-    stack: ['React', 'JavaScript', 'CSS3', 'Responsive Design'],
-    problem: 'Empresa local necesitaba presencia digital para mostrar sus servicios y productos de refrigeración.',
-    solution: 'Desarrollé un sitio web profesional con catálogo de productos, galería de trabajos realizados y formularios de contacto.',
-    results: [
-      'Sitio web profesional y responsive',
-      'Catálogo organizado por categorías',
-      'Formularios de contacto funcionales',
-      'Mejora en la presencia digital de la empresa'
-    ],
-    featured: false,
-    details: {
-      context: 'Proyecto real para empresa local de refrigeración.',
-      role: 'Frontend Developer & Designer',
-      timeline: '3 semanas',
-      process: [
-        'Reunión con cliente y análisis de requerimientos',
-        'Diseño de arquitectura y wireframes',
-        'Desarrollo del frontend',
-        'Integración de formularios',
-        'Deploy y entrega final'
-      ]
-    }
-  },
-  {
     id: 'ui-design-project',
     title: 'UI Design Portfolio',
     description: 'Creación de sistemas de diseño escalables: componentes, patrones y metodologías para interfaces modernas.',
     image: '/images/proyecto-ui.png',
     url: 'https://www.figma.com/design/wdTj3Sr9jJchEHiP1HwW69/Proyecto-UI---Ricardo-Nigrelli?node-id=0-1&t=bmpK6egcdPWVxEO6-1',
-    type: 'UI Design',
+    type: 'ui',
     year: 2025,
     stack: ['Figma', 'Design Systems', 'Component Libraries', 'Prototyping'],
     problem: 'Crear interfaces consistentes y escalables que mejoren la experiencia de usuario y faciliten el desarrollo.',

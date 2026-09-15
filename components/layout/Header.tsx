@@ -15,13 +15,9 @@ export function Header() {
 
   const handleLinkClick = (href: string) => {
     setIsMenuOpen(false);
-    
-    // Smooth scroll a la sección
+
     if (href.startsWith('#')) {
-      const element = document.querySelector(href);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
+      document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
     }
   };
 

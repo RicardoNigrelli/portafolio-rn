@@ -1,6 +1,6 @@
 'use client';
 
-import { createContext, useContext, useState, ReactNode } from 'react';
+import { createContext, useContext, useState, ReactNode, useEffect } from 'react';
 
 type Language = 'es' | 'en';
 
@@ -27,6 +27,7 @@ const translations = {
       subtitle: 'Full Stack Developer + UX/UI Designer',
       description: 'En la intersección entre psicología y tecnología, diseño productos digitales pensados para personas reales.',
       cta: {
+        cv: 'Descargar CV',
         projects: 'Ver Proyectos',
         contact: 'Conversemos',
       },
@@ -90,6 +91,14 @@ const translations = {
       back: 'Volver a proyectos',
       viewSite: 'Ver sitio',
       code: 'Código',
+      viewCase: 'Ver el caso',
+      type: {
+        producto: 'Producto en uso',
+        backend: 'API backend',
+        landing: 'Landing de evento',
+        ux: 'Investigación UX',
+        ui: 'Diseño UI',
+      },
       sendEmail: 'Conversemos',
       email: 'EMAIL',
       location: 'UBICACIÓN',
@@ -117,6 +126,7 @@ const translations = {
       subtitle: 'Full Stack Developer + UX/UI Designer',
       description: 'At the intersection of psychology and technology, I design digital products for real people.',
       cta: {
+        cv: 'Download CV',
         projects: 'View Projects',
         contact: 'Let\'s Talk',
       },
@@ -180,6 +190,14 @@ const translations = {
       back: 'Back to projects',
       viewSite: 'View Site',
       code: 'Code',
+      viewCase: 'View case study',
+      type: {
+        producto: 'Live product',
+        backend: 'Backend API',
+        landing: 'Event landing',
+        ux: 'UX research',
+        ui: 'UI design',
+      },
       sendEmail: 'Let\'s Talk',
       email: 'EMAIL',
       location: 'LOCATION',
@@ -217,6 +235,13 @@ export function LanguageProvider({ children }: LanguageProviderProps) {
       localStorage.setItem('language', lang);
     }
   };
+
+  // El contenido cambia de idioma, asi que el atributo lang del documento tiene que
+  // acompanar: los lectores de pantalla eligen la voz por ahi, y los buscadores el
+  // idioma de indexacion. Sin esto, el ingles queda anunciado como espanol.
+  useEffect(() => {
+    document.documentElement.lang = language;
+  }, [language]);
 
   const t = (key: string): string => {
     const keys = key.split('.');

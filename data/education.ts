@@ -16,6 +16,20 @@ export interface EducationItem {
 
 export const education: EducationItem[] = [
   {
+    id: 'gcp-foundations',
+    title: {
+      es: 'Google Cloud Computing Foundations',
+      en: 'Google Cloud Computing Foundations'
+    },
+    institution: 'Google Skills / Talento Tech',
+    duration: 'Desde Sep 2025',
+    status: 'En curso',
+    description: {
+      es: 'Ruta de fundamentos de Google Cloud, con el objetivo de rendir la certificación Associate Cloud Engineer.',
+      en: 'Google Cloud foundations track, working towards the Associate Cloud Engineer certification.'
+    }
+  },
+  {
     id: 'psicologia-uai',
     title: {
       es: 'Licenciatura en Psicología',
@@ -37,7 +51,7 @@ export const education: EducationItem[] = [
     },
     institution: 'IBM',
     duration: 'Sep-Dic 2025',
-    status: 'En curso',
+    status: 'Completado',
     description: {
       es: 'Programa de desarrollo profesional en tecnologías IBM y mejores prácticas de desarrollo.',
       en: 'Professional development program in IBM technologies and development best practices.'

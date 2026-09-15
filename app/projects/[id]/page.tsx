@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { ExternalLink, Github } from 'lucide-react';
 import { Container } from '@/components/common/Container';
 import { ProjectLinks } from '@/components/project/ProjectLinks';
+import { ProjectTypeBadge } from '@/components/project/ProjectTypeBadge';
 import { ProjectDetails } from '@/components/project/ProjectDetails';
 import { TechStackSidebar } from '@/components/project/TechStackSidebar';
 import { ProjectContent } from '@/components/project/ProjectContent';
@@ -14,15 +15,16 @@ import { OtherProjectsHeading } from '@/components/project/OtherProjectsHeading'
 import { projects } from '@/data/projects';
 
 interface ProjectPageProps {
-  params: {
+  params: Promise<{
     id: string;
-  };
+  }>;
 }
 
 // Generar metadata dinámico
 export async function generateMetadata({ params }: ProjectPageProps): Promise<Metadata> {
-  const project = projects.find(p => p.id === params.id);
-  
+  const { id } = await params;
+  const project = projects.find(p => p.id === id);
+
   if (!project) {
     return {
       title: 'Proyecto no encontrado',
@@ -47,9 +49,10 @@ export async function generateStaticParams() {
   }));
 }
 
-export default function ProjectPage({ params }: ProjectPageProps) {
-  const project = projects.find(p => p.id === params.id);
-  
+export default async function ProjectPage({ params }: ProjectPageProps) {
+  const { id } = await params;
+  const project = projects.find(p => p.id === id);
+
   if (!project) {
     notFound();
   }
@@ -67,9 +70,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div>
               <div className="mb-4">
-                <span className="inline-block px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">
-                  {project.type}
-                </span>
+                <ProjectTypeBadge type={project.type} />
               </div>
               
               <h1 className="text-h1-mobile lg:text-h1-desktop font-display font-bold text-primary mb-4">
@@ -113,8 +114,8 @@ export default function ProjectPage({ params }: ProjectPageProps) {
             </div>
             
             {/* Imagen del proyecto */}
-            <div className="relative max-w-2xl mx-auto lg:max-w-none">
-              <div className="aspect-video rounded-xl overflow-hidden shadow-card">
+            <div className="relative w-full max-w-2xl mx-auto lg:max-w-none">
+              <div className="relative aspect-video rounded-xl overflow-hidden shadow-card">
                 <Image
                   src={project.image}
                   alt={project.title}
