@@ -18,7 +18,7 @@ export function Hero() {
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center pt-20 pb-8">
+    <section id="home" className="min-h-[80vh] flex items-center justify-center pt-24 pb-10">
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center max-w-6xl mx-auto">
           {/* Contenido de texto (mobile first) */}

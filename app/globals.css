@@ -18,7 +18,14 @@
   --color-secondary: #00D9FF;       /* Cian de marca - SOLO sobre oscuro (11.19:1 sobre primary) */
   --color-secondary-ink: #007A8F;   /* Mismo hue, legible sobre claro (5.02:1) */
   --color-accent: #FF6B6B;          /* Rojo suave - highlights puntuales */
-  --color-background: #FFFFFF;
+  /* Blanco roto, no blanco puro: el blanco puro es incomodamente brillante y,
+     sobre todo, deja las 10 superficies `bg-white` del sitio -tarjetas de
+     proyecto, timeline, bloques del caso- al mismo valor que el suelo, asi que
+     no se leen como tarjetas. Esta saturado al 8% con el hue del cian de marca
+     (188.9deg) para que la paleta se sienta de una pieza.
+     Contrastes: #1A1A1A 16.64:1, #666666 5.49:1, #007A8F 4.80:1. */
+  --color-background: #F9FAFA;
+  --color-surface: #FFFFFF;      /* las tarjetas, que ahora si se despegan */
   --color-text-primary: #1A1A1A;    /* Casi negro - body text */
   --color-text-secondary: #666666;  /* Gris - descriptivos (5.74:1 sobre blanco) */
   --color-text-light: #999999;      /* Gris claro - NO usar como texto: 2.85:1 */
