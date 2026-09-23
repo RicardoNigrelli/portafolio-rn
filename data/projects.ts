@@ -58,6 +58,36 @@ export const projects: Project[] = [
     }
   },
   {
+    id: 'urban-songbook',
+    title: 'Urban Songbook',
+    description: 'Cancionero para equipos de música: acordes con transposición, setlists con convocatoria y permisos por rol. Lo usa un equipo de cinco personas.',
+    image: '/images/projects/urban-songbook-preview.svg',
+    type: 'producto',
+    year: 2026,
+    stack: ['Next.js', 'TypeScript', 'Drizzle ORM', 'PostgreSQL (Neon)', 'Web Push', 'Zod'],
+    problem: 'Un equipo de música coordina por WhatsApp: quién toca, qué canciones, en qué tonalidad y con qué letra actualizada. La información se pierde entre mensajes y cada músico termina con su propia versión del repertorio.',
+    solution: 'Un cancionero único con acordes, transposición de tonalidad y capo personal por músico; setlists con convocatoria y confirmación de asistencia; atril con acceso autenticado o por enlace público; y permisos diferenciados entre líder, editor y miembro.',
+    results: [
+      'En uso por un equipo de cinco personas',
+      'Tres roles con permisos diferenciados',
+      'Una ronda de QA de extremo a extremo documentada por versión',
+      'Demo pública pendiente: la instancia en línea es la productiva, con datos de personas reales'
+    ],
+    featured: true,
+    details: {
+      context: 'Desarrollado por iniciativa propia para la comunidad en la que participo como voluntario.',
+      role: 'Full Stack Developer & Diseño de producto',
+      timeline: 'Desde agosto 2026, en evolución',
+      process: [
+        'Relevamiento de cómo se coordina hoy el equipo',
+        'Modelo de datos de canciones, setlists y roles',
+        'Transposición de tonalidad y capo personal por músico',
+        'Convocatoria con confirmación de asistencia y notificaciones push',
+        'QA de extremo a extremo con los tres roles antes de cada liberación'
+      ]
+    }
+  },
+  {
     id: 'facturacion-arca',
     title: 'Facturación electrónica ARCA/AFIP',
     description: 'Backend que emite comprobantes fiscales contra ARCA/AFIP, con colas, idempotencia estricta y trazabilidad hasta el CAE.',

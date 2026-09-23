@@ -35,7 +35,7 @@ const translations = {
     projects: {
       subtitle: 'Mis Trabajos',
       title: 'Proyectos Destacados',
-      description: 'Una selección de proyectos que demuestran mis habilidades en desarrollo frontend, UX/UI design y resolución de problemas.',
+      description: 'Una selección de proyectos que cubren el ciclo completo: interfaz, servidor, datos e infraestructura, más el diseño y la investigación detrás de cada uno.',
       cta: 'Busco proyectos donde la experiencia de usuario y la tecnología se unan para crear algo distinto.',
       interested: '¿Interesado en ver más detalles de algún proyecto?',
       discuss: 'Hablemos sobre tu proyecto →',
@@ -52,7 +52,7 @@ const translations = {
     skills: {
       subtitle: 'Mi Toolkit',
       title: 'Skills & Tecnologías',
-      description: 'Herramientas y tecnologías que domino para crear experiencias web completas, desde el diseño hasta el deployment.',
+      description: 'Herramientas y tecnologías con las que trabajo para llevar un producto del diseño al deployment.',
       learning: {
         title: 'Formación en curso',
         description: 'Curso Google Cloud Computing Foundations (Google Skills / Talento Tech) con la certificación Associate Cloud Engineer como objetivo. Completé Fundamentos de IA en IBM SkillsBuild en diciembre de 2025.',
@@ -134,7 +134,7 @@ const translations = {
     projects: {
       subtitle: 'My Work',
       title: 'Featured Projects',
-      description: 'A selection of projects that showcase my skills in frontend development, UX/UI design and problem-solving.',
+      description: 'A selection of projects covering the full cycle: interface, server, data and infrastructure, plus the design and research behind each one.',
       cta: 'I look for projects where user experience and technology come together to create something different.',
       interested: 'Interested in seeing more details about any project?',
       discuss: 'Let\'s talk about your project →',
@@ -151,7 +151,7 @@ const translations = {
     skills: {
       subtitle: 'My Toolkit',
       title: 'Skills & Technologies',
-      description: 'Tools and technologies I master to create complete web experiences, from design to deployment.',
+      description: 'Tools and technologies I work with to take a product from design to deployment.',
       learning: {
         title: 'Currently studying',
         description: 'Google Cloud Computing Foundations (Google Skills / Talento Tech), working towards the Associate Cloud Engineer certification. Completed IBM SkillsBuild AI Fundamentals in December 2025.',

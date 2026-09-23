@@ -1,0 +1,46 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Urban Songbook — cancionero para equipos de música">
+  <defs>
+    <linearGradient id="sb-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0F2027;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0A0E27;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#sb-bg)"/>
+
+  <!-- Pentagrama -->
+  <g stroke="#ffffff" stroke-width="1" opacity="0.18">
+    <line x1="140" y1="150" x2="660" y2="150"/>
+    <line x1="140" y1="170" x2="660" y2="170"/>
+    <line x1="140" y1="190" x2="660" y2="190"/>
+    <line x1="140" y1="210" x2="660" y2="210"/>
+    <line x1="140" y1="230" x2="660" y2="230"/>
+  </g>
+
+  <!-- Notas -->
+  <g fill="#7DD3FC" opacity="0.9">
+    <ellipse cx="230" cy="210" rx="13" ry="9" transform="rotate(-18 230 210)"/>
+    <rect x="241" y="158" width="3" height="54" rx="1.5"/>
+    <ellipse cx="350" cy="170" rx="13" ry="9" transform="rotate(-18 350 170)"/>
+    <rect x="361" y="118" width="3" height="54" rx="1.5"/>
+    <ellipse cx="470" cy="230" rx="13" ry="9" transform="rotate(-18 470 230)"/>
+    <rect x="481" y="178" width="3" height="54" rx="1.5"/>
+    <ellipse cx="590" cy="190" rx="13" ry="9" transform="rotate(-18 590 190)"/>
+    <rect x="601" y="138" width="3" height="54" rx="1.5"/>
+  </g>
+
+  <!-- Acordes sobre el pentagrama -->
+  <g font-family="ui-monospace, Menlo, Consolas, monospace" font-size="20" fill="#FDE68A" opacity="0.95">
+    <text x="224" y="128">G</text>
+    <text x="344" y="128">D</text>
+    <text x="464" y="128">Em</text>
+    <text x="584" y="128">C</text>
+  </g>
+
+  <text x="400" y="315" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif"
+        font-size="36" font-weight="600" fill="#ffffff">Urban Songbook</text>
+  <text x="400" y="352" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif"
+        font-size="18" fill="#94A3B8">Cancionero para equipos de música</text>
+  <text x="400" y="392" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif"
+        font-size="15" fill="#64748B">Transposición · Setlists · Permisos por rol</text>
+</svg>

@@ -22,7 +22,7 @@ export const education: EducationItem[] = [
       en: 'Google Cloud Computing Foundations'
     },
     institution: 'Google Skills / Talento Tech',
-    duration: 'Desde Sep 2025',
+    duration: 'Desde Sep 2026',
     status: 'En curso',
     description: {
       es: 'Ruta de fundamentos de Google Cloud, con el objetivo de rendir la certificación Associate Cloud Engineer.',
@@ -46,15 +46,15 @@ export const education: EducationItem[] = [
   {
     id: 'ibm-skillsbuild',
     title: {
-      es: 'IBM SkillsBuild',
-      en: 'IBM SkillsBuild'
+      es: 'IBM SkillsBuild: Fundamentos de IA',
+      en: 'IBM SkillsBuild: AI Fundamentals'
     },
     institution: 'IBM',
     duration: 'Sep-Dic 2025',
     status: 'Completado',
     description: {
-      es: 'Programa de desarrollo profesional en tecnologías IBM y mejores prácticas de desarrollo.',
-      en: 'Professional development program in IBM technologies and development best practices.'
+      es: 'Fundamentos de inteligencia artificial: aprendizaje automático, procesamiento de lenguaje natural, redes neuronales, ética y sesgos.',
+      en: 'Artificial intelligence fundamentals: machine learning, natural language processing, neural networks, ethics and bias.'
     }
   },
   {
