@@ -53,6 +53,10 @@ const translations = {
       subtitle: 'Mi Toolkit',
       title: 'Skills & Tecnologías',
       description: 'Herramientas y tecnologías con las que trabajo para llevar un producto del diseño al deployment.',
+      infra: {
+        title: 'Infraestructura y datos en el trabajo',
+        description: 'En Lisicki Litvin & Asociados implementé la capa de integración de un cliente que pasó de intercambiar archivos por FTP a exponer una API, con Azure Data Factory convergiendo las llamadas contra una Function App y pipelines por dominio de datos. Y diseñé en Google Cloud la automatización de un proceso que otro cliente resolvía a mano en Excel y PowerPoint: ETL sobre BigQuery, cálculos en Cloud Run y agendamiento con un DAG en Cloud Composer, publicado en una tabla que hoy consume Power BI y que puede consumir cualquier aplicación. Es trabajo para clientes, así que no hay código ni enlaces públicos.',
+      },
       learning: {
         title: 'Formación en curso',
         description: 'Curso Google Cloud Computing Foundations (Google Skills / Talento Tech) con la certificación Associate Cloud Engineer como objetivo. Completé Fundamentos de IA en IBM SkillsBuild en diciembre de 2025.',
@@ -152,6 +156,10 @@ const translations = {
       subtitle: 'My Toolkit',
       title: 'Skills & Technologies',
       description: 'Tools and technologies I work with to take a product from design to deployment.',
+      infra: {
+        title: 'Infrastructure and data at work',
+        description: 'At Lisicki Litvin & Asociados I built the integration layer for a client that moved from exchanging files over FTP to exposing an API, with Azure Data Factory converging the calls against a Function App and pipelines organised by data domain. I also designed on Google Cloud the automation of a process another client was handling by hand in Excel and PowerPoint: ETL over BigQuery, calculations in Cloud Run and scheduling with a Cloud Composer DAG, published to a table that Power BI consumes today and any application could consume. This is client work, so there is no public code or links.',
+      },
       learning: {
         title: 'Currently studying',
         description: 'Google Cloud Computing Foundations (Google Skills / Talento Tech), working towards the Associate Cloud Engineer certification. Completed IBM SkillsBuild AI Fundamentals in December 2025.',

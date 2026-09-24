@@ -18,6 +18,10 @@ export const skillCategories: SkillCategory[] = [
     items: ['PostgreSQL', 'MySQL', 'Prisma', 'Drizzle ORM']
   },
   {
+    label: 'Cloud y datos',
+    items: ['Azure Data Factory', 'Azure Functions', 'Power Apps', 'BigQuery', 'Cloud Run', 'Cloud Composer / Airflow', 'Power BI', 'Docker']
+  },
+  {
     label: 'Diseño',
     items: ['Figma', 'UX/UI', 'Design Thinking', 'User Research']
   }

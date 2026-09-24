@@ -43,6 +43,13 @@ export function SkillsSection() {
 
         <ScrollReveal delay={0.1}>
           <p className="mt-8 text-text-secondary max-w-2xl leading-relaxed">
+            <span className="font-semibold text-primary">{t('skills.infra.title')}: </span>
+            {t('skills.infra.description')}
+          </p>
+        </ScrollReveal>
+
+        <ScrollReveal delay={0.15}>
+          <p className="mt-4 text-text-secondary max-w-2xl leading-relaxed">
             <span className="font-semibold text-primary">{t('skills.learning.title')}: </span>
             {t('skills.learning.description')}
           </p>
