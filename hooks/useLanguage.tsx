@@ -59,7 +59,7 @@ const translations = {
       },
       learning: {
         title: 'Formación en curso',
-        description: 'Curso Google Cloud Computing Foundations (Google Skills / Talento Tech) con la certificación Associate Cloud Engineer como objetivo. Completé Fundamentos de IA en IBM SkillsBuild en diciembre de 2025.',
+        description: 'Completé Google Cloud Computing Foundations y ahora curso la ruta Google Cloud Engineering (Google Skills / Talento Tech). Completé Fundamentos de IA en IBM SkillsBuild en diciembre de 2025.',
       },
     },
     education: {
@@ -162,7 +162,7 @@ const translations = {
       },
       learning: {
         title: 'Currently studying',
-        description: 'Google Cloud Computing Foundations (Google Skills / Talento Tech), working towards the Associate Cloud Engineer certification. Completed IBM SkillsBuild AI Fundamentals in December 2025.',
+        description: 'Completed Google Cloud Computing Foundations and now taking the Google Cloud Engineering track (Google Skills / Talento Tech). Completed IBM SkillsBuild AI Fundamentals in December 2025.',
       },
     },
     education: {

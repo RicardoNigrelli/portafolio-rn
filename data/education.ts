@@ -22,11 +22,11 @@ export const education: EducationItem[] = [
       en: 'Google Cloud Computing Foundations'
     },
     institution: 'Google Skills / Talento Tech',
-    duration: 'Desde Sep 2026',
-    status: 'En curso',
+    duration: 'Sep-Oct 2026',
+    status: 'Completado',
     description: {
-      es: 'Ruta de fundamentos de Google Cloud, con el objetivo de rendir la certificación Associate Cloud Engineer.',
-      en: 'Google Cloud foundations track, working towards the Associate Cloud Engineer certification.'
+      es: 'Ruta de fundamentos de Google Cloud. Ahora curso la ruta Google Cloud Engineering.',
+      en: 'Google Cloud foundations track. Now taking the Google Cloud Engineering track.'
     }
   },
   {
