@@ -1,21 +1,21 @@
 WEBVTT
 
 1
-00:00:00.200 --> 00:00:05.536
-Un backend que emite facturas electrónicas contra ARCA a partir de las operaciones de un sistema de gestión.
+00:00:00.200 --> 00:00:05.306
+Un backend que emite facturas electrónicas a partir de las operaciones de un sistema de préstamos.
 
 2
-00:00:06.236 --> 00:00:09.833
+00:00:06.006 --> 00:00:09.603
 Cada operación entra por la API y vuelve con su comprobante.
 
 3
-00:00:10.763 --> 00:00:14.535
+00:00:10.533 --> 00:00:14.305
 La numeración es correlativa por punto de venta, como pide ARCA.
 
 4
-00:00:15.035 --> 00:00:17.892
+00:00:14.805 --> 00:00:17.662
 Y el sistema lleva sus propias métricas del día.
 
 5
-00:00:19.321 --> 00:00:22.294
+00:00:19.091 --> 00:00:22.064
 Diseñado y desarrollado por Ricardo Nigrelli.
