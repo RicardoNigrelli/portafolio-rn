@@ -66,7 +66,7 @@ export const projects: Project[] = [
     year: 2026,
     stack: ['Next.js', 'TypeScript', 'Drizzle ORM', 'PostgreSQL (Neon)', 'Web Push', 'Zod'],
     problem: 'Un equipo de música coordina por WhatsApp: quién toca, qué canciones, en qué tonalidad y con qué letra actualizada. La información se pierde entre mensajes y cada músico termina con su propia versión del repertorio.',
-    solution: 'Un cancionero único con acordes, transposición de tonalidad y capo personal por músico; setlists con convocatoria y confirmación de asistencia; atril con acceso autenticado o por enlace público; y permisos diferenciados entre líder, editor y miembro.',
+    solution: 'Un cancionero único con acordes, transposición de tonalidad y capo personal por músico; setlists con convocatoria y confirmación de asistencia; atril con acceso autenticado o por enlace público; y permisos diferenciados entre líder, editor y miembro. En el atril, un modo Ensayo reproduce el audio de la canción en el tono del setlist, cambia el tono y el tempo en el mismo celular y salta a cada parte con la letra siguiéndolo; y una vista karaoke muestra la letra en diapositivas de a dos.',
     results: [
       'En uso por un equipo de cinco personas',
       'Tres roles con permisos diferenciados',
