@@ -34,6 +34,8 @@ export const projects: Project[] = [
     title: 'Urban Proyecta',
     description: 'Sistema de proyección en vivo: un panel de operador controla la pantalla y todo se sincroniza en tiempo real. En uso desde mayo de 2026.',
     image: '/images/projects/urban-proyecta.png',
+    video: '/videos/urban-proyecta.mp4',
+    videoSubtitles: '/videos/urban-proyecta.vtt',
     url: 'https://urban-proyecta-frontend.vercel.app/dashboard',
     github: 'https://github.com/RicardoNigrelli/live-worship-projection',
     type: 'producto',
@@ -98,6 +100,8 @@ export const projects: Project[] = [
     title: 'Facturación electrónica ARCA/AFIP',
     description: 'Backend que emite comprobantes fiscales contra ARCA/AFIP, con colas, idempotencia estricta y trazabilidad hasta el CAE.',
     image: '/images/projects/facturacion-arca.png',
+    video: '/videos/facturacion-arca.mp4',
+    videoSubtitles: '/videos/facturacion-arca.vtt',
     url: 'https://nestjs-facturacion-electronica-demo.vercel.app/api/docs',
     github: 'https://github.com/RicardoNigrelli/nestjs-facturacion-electronica-demo',
     type: 'backend',
@@ -122,6 +126,39 @@ export const projects: Project[] = [
         'Idempotencia y manejo de reintentos',
         'Auditoría y reconciliación de cada llamada',
         'Sanitización y publicación con AFIP en modo simulado'
+      ]
+    }
+  },
+  {
+    id: 'subtitulos-en-vivo',
+    title: 'Subtítulos en vivo para conferencias',
+    description: 'Transcripción y traducción simultánea de varias charlas en paralelo: cada asistente elige sesión e idioma desde el celular. Hecho en 24 horas para la Nerdearla Vibeathon 2026.',
+    image: '/images/projects/subtitulos-en-vivo.png',
+    video: '/videos/subtitulos-en-vivo.mp4',
+    videoSubtitles: '/videos/subtitulos-en-vivo.vtt',
+    github: 'https://github.com/RicardoNigrelli/subtitulos-en-vivo',
+    type: 'producto',
+    year: 2026,
+    stack: ['Python', 'Gemini Live API', 'Gemini Flash-Lite', 'WebSockets', 'aiohttp', 'JavaScript'],
+    problem: 'La consigna de la Nerdearla Vibeathon 2026: en 24 horas, una solución de código abierto que transcriba y traduzca en simultáneo las charlas de una conferencia con varias salas, con una vista para el público.',
+    solution: 'El audio de cada charla entra en vivo a la Gemini Live API para la transcripción, y la traducción sale de Gemini Flash-Lite. Varias sesiones corren en paralelo y cada asistente elige, desde una vista web en el celular, qué sesión seguir y en qué idioma. También corre en modo replay, con sesiones grabadas, sin clave ni costo.',
+    results: [
+      'Construido en 24 horas, sin equipo y con agentes de IA',
+      'Dos sesiones simultáneas de unos 11 minutos, sin huecos en la transcripción',
+      'Reproducible desde el README, con los comandos de cada medición',
+      'Código abierto en GitHub'
+    ],
+    featured: true,
+    details: {
+      context: 'Nerdearla Vibeathon 2026, hackathon de 24 horas (24 y 25 de septiembre). Participé de forma virtual y solo.',
+      role: 'Desarrollo completo',
+      timeline: '24 horas, septiembre 2026',
+      process: [
+        'Investigación previa de los límites de la Gemini Live API',
+        'Arquitectura: un worker por sesión y un hub que reparte los subtítulos por WebSockets',
+        'Transcripción en vivo y traducción en dos pasos',
+        'Vista del público y panel de producción para varias sesiones',
+        'Mediciones reproducibles y video de entrega'
       ]
     }
   },
