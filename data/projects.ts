@@ -9,6 +9,10 @@ export interface Project {
   urlLabel?: string;
   github?: string;
   presentation?: string;
+  /** Video corto del proyecto (mp4 en /public/videos). En la página de detalle reemplaza a la imagen, que queda de póster. */
+  video?: string;
+  /** Subtítulos del video (.vtt) con el texto narrado. */
+  videoSubtitles?: string;
   type: 'producto' | 'backend' | 'landing' | 'ux' | 'ui';
   year: number;
   stack: string[];
@@ -62,6 +66,8 @@ export const projects: Project[] = [
     title: 'Urban Songbook',
     description: 'Cancionero para equipos de música: acordes con transposición, setlists con convocatoria y permisos por rol. Lo usa un equipo de cinco personas.',
     image: '/images/projects/urban-songbook.png',
+    video: '/videos/urban-songbook.mp4',
+    videoSubtitles: '/videos/urban-songbook.vtt',
     type: 'producto',
     year: 2026,
     stack: ['Next.js', 'TypeScript', 'Drizzle ORM', 'PostgreSQL (Neon)', 'Web Push', 'Zod'],

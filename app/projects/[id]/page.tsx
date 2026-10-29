@@ -113,17 +113,33 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               </div>
             </div>
             
-            {/* Imagen del proyecto */}
+            {/* Video del proyecto si lo hay (la imagen queda de póster); si no, la imagen */}
             <div className="relative w-full max-w-2xl mx-auto lg:max-w-none">
               <div className="relative aspect-video rounded-xl overflow-hidden shadow-card">
-                <Image
-                  src={project.image}
-                  alt={project.title}
-                  fill
-                  className="object-cover"
-                  priority
-                  sizes="(max-width: 640px) 90vw, (max-width: 1024px) 80vw, 50vw"
-                />
+                {project.video ? (
+                  <video
+                    className="absolute inset-0 h-full w-full object-cover"
+                    controls
+                    playsInline
+                    preload="metadata"
+                    poster={project.image}
+                    aria-label={`Video de ${project.title}`}
+                  >
+                    <source src={project.video} type="video/mp4" />
+                    {project.videoSubtitles && (
+                      <track kind="captions" src={project.videoSubtitles} srcLang="es" label="Español" />
+                    )}
+                  </video>
+                ) : (
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    className="object-cover"
+                    priority
+                    sizes="(max-width: 640px) 90vw, (max-width: 1024px) 80vw, 50vw"
+                  />
+                )}
               </div>
             </div>
           </div>

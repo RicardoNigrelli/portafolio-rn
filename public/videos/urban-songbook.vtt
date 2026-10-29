@@ -1,0 +1,33 @@
+WEBVTT
+
+1
+00:00:00.350 --> 00:00:07.434
+Urban Songbook es el cancionero de un equipo de música real. Lo usan cinco personas para preparar cada servicio.
+
+2
+00:00:08.984 --> 00:00:16.041
+Cada canción guarda la letra con sus acordes. El tono se cambia con un toque, y los acordes se transponen solos.
+
+3
+00:00:17.051 --> 00:00:21.407
+El líder arma el setlist: elige quién canta cada canción y en qué tono.
+
+4
+00:00:22.417 --> 00:00:27.998
+En el ensayo, cada músico abre el atril en su celular, con la canción en el tono de quien canta.
+
+5
+00:00:28.984 --> 00:00:35.042
+En modo Ensayo suena la grabación. Se salta a cualquier parte de la canción, y la letra la sigue.
+
+6
+00:00:36.051 --> 00:00:42.075
+El tono y el tempo se ajustan ahí mismo, en el teléfono, sin esperar a que el audio se procese de nuevo.
+
+7
+00:00:43.051 --> 00:00:48.193
+Y la vista karaoke muestra la letra en diapositivas, de a dos, para cantar sin perderse.
+
+8
+00:00:49.184 --> 00:00:55.318
+Diseñado y desarrollado por Ricardo Nigrelli, con Next.js, TypeScript y PostgreSQL.
