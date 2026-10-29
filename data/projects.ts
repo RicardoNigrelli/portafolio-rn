@@ -61,7 +61,7 @@ export const projects: Project[] = [
     id: 'urban-songbook',
     title: 'Urban Songbook',
     description: 'Cancionero para equipos de música: acordes con transposición, setlists con convocatoria y permisos por rol. Lo usa un equipo de cinco personas.',
-    image: '/images/projects/urban-songbook-preview.svg',
+    image: '/images/projects/urban-songbook.png',
     type: 'producto',
     year: 2026,
     stack: ['Next.js', 'TypeScript', 'Drizzle ORM', 'PostgreSQL (Neon)', 'Web Push', 'Zod'],
@@ -71,7 +71,7 @@ export const projects: Project[] = [
       'En uso por un equipo de cinco personas',
       'Tres roles con permisos diferenciados',
       'Una ronda de QA de extremo a extremo documentada por versión',
-      'Demo pública pendiente: la instancia en línea es la productiva, con datos de personas reales'
+      'Capturas de una copia local con canciones y nombres inventados: la instancia en línea es la productiva, con datos de personas reales'
     ],
     featured: true,
     details: {
